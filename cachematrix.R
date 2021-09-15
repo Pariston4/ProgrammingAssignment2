@@ -33,7 +33,7 @@ makeCacheMatrix <- function(m = matrix()) {
            getsolve = getsolve)
 }
 
-
+#Return the inversed matrix with the cache
 cacheSolve <- function(x, ...) {
       inv <- x$getsolve()
       if(!is.null(inv)) {
@@ -46,6 +46,7 @@ cacheSolve <- function(x, ...) {
       inv
 }
 
+#Test of the function
 m <- matrix(1:4, 2, 2)
 m1 <- makeCacheMatrix (m)
 cacheSolve(m1)
